@@ -1,0 +1,8 @@
+FROM golang:1.10
+
+ADD metrics-server /
+ENV KUBERNETES_SERVICE_HOST=10.96.0.1
+ENV KUBERNETES_SERVICE_PORT=443
+
+ENTRYPOINT ["/metrics-server"]
+
